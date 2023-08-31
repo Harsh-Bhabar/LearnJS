@@ -1,6 +1,9 @@
+
+// ALSO CHECK - devtools.tech/lists/s/top-javascript-array-interview-questions-or-problem-solving-or-array-polyfills---lid---bzcbM8FDmAP0tCcJhKfe
+
 // ---------------------- POLYFILL - ONCE
 
-function once(fn, context) {
+https: function once(fn, context) {
   let ran;
 
   return function () {
@@ -48,6 +51,53 @@ console.timeEnd("with Memorize");
 console.time("with Memorize");
 console.log(memo(765, 765));
 console.timeEnd("with Memorize");
+
+
+// -------------------- MAP
+// Array.map((num, i, arr)=>{});
+
+Array.prototype.myMap = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    temp.push(cb(this[i], i, this));
+  }
+  return temp;
+};
+const polyMap = arr1.myMap((num, i, arr1) => {
+  return num * 5;
+});
+
+// ------------------------ FILTER
+
+Array.prototype.myFiler = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i, this)) temp.push(this[i]);
+  }
+  return temp;
+};
+const polyFiler = arr1.myFiler((num, i, arr1) => {
+  return num % 2 == 0;
+});
+
+
+// ------------------------ REDUCE
+// Array.reduce(acc, curr, i, arr)
+
+Array.prototype.myReduce = function (cb, initalVal) {
+  let accumulator = initalVal;
+  for (let i = 0; i < this.length; i++) {
+    accumulator = accumulator ? cb(accumulator, this[i], i, this) : this[i];
+  }
+  return accumulator;
+};
+const polyReduce = arr1.myReduce((acc, curr, i, arr1) => {
+  return acc + curr;
+}, 0);
+
+console.log(polyMap);
+console.log(polyFiler);
+console.log(polyReduce);
 
 
 // ---------------------- POLYFILL - CALL
