@@ -158,10 +158,24 @@ console.log(polyReduce);
 
 
 // arrow function vs normal func 
-function fun(num){
-	return num*5;
+// function fun(num){
+// 	return num*5;
+// }
+// const fun = (num) => {
+// 	return num * 5;
+// }
+// console.log(fun(5));
+
+// ques
+
+let user = {
+	username1 : "Harsh use",
+	rc : () => {
+		console.log(this.username1);
+	},
+	rc2() {
+		console.log(this.username1);
+	} 
 }
-const fun = (num) => {
-	return num * 5;
-}
-console.log(fun(5));
+user.rc();
+user.rc2();
