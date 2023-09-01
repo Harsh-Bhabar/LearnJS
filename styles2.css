@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+#main{
+	width: 100%;
+	height: 100%;
+	/* background-color: black; */
+	background-image: url(https://images.unsplash.com/photo-1693168291998-9e2dbc8e7d81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2620&q=80);
+	background-size: cover;
+}
+
+#block-1 {
+	/* position: relative; */
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin: 10px 10px;
+	border: 1px solid black;
+	/* padding:  ; */
+}
+
+#block-2  {
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	width: 150px;
+	height: 100px;
+	background-color: blue;
+	margin: 10px 10px;
+	border: 1px solid black;
+}
+
+#block-3 {
+	/* position: absolute; */
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	margin: 10px 10px;
+	border: 1px solid black;
+	/* padding:  ; */
+}
+
+#bigbox{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background-color: aqua;
+}
+
+#smallbox{
+	/* if absolute it can go outside the parent border */
+	position: absolute; 
+	right: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	background-color:blue;
+}
+
+/* 
+flex the parent element 
+
+to work on height level, we use align items
+to work on width, we use justify-content
+*/
+#flexprop{
+	width: 500px;
+	height: 500px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#box1{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+#box2 {
+	width: 100px;
+	height: 100px;
+	background-color: black;
+}
+
+#box3 {
+	width: 100px;
+	height: 100px;
+	background-color: wheat;
+}
