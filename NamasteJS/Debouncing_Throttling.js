@@ -2,7 +2,11 @@
 // q. create a btn UI and add debounce as follows -> 
 	// show "btn pressed <x> times" everytime a btn is pressed
 	// Increase "Triggerred <y> times" count after 800ms of debounce
-
+	
+<button class="increment_btn">Increment</button>
+	<p>Btn pressed <span class="increment_pressed">0</span> times</p>
+	<p>Triggerred <span class="increment_cnt">0</span> times</p>
+	<p>Throttled <span class="increment_throttle">0</span> times</p>
 
 let btn = document.querySelector(".increment_btn");
 let btnPressed = document.querySelector(".increment_pressed")

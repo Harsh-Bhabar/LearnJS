@@ -22,36 +22,36 @@ console.log("end");
 
 // PROMISE 
 
-// const ans = new Promise( (resolve, reject) => {
-// 	setTimeout(()=>{
-// 		const result = true;
-// 		if(result){
-// 			resolve("accepted promise");
-// 		}else{
-// 			reject(new Error("rejected"));
-// 		}
-// 	}, 1000);
-// });
+const ans = new Promise( (resolve, reject) => {
+	setTimeout(()=>{
+		const result = true;
+		if(result){
+			resolve("accepted promise");
+		}else{
+			reject(new Error("rejected"));
+		}
+	}, 1000);
+});
 
 // then()-> if promise is fullfilled 
 // catch -> is not fulfilled
 
-// console.log(ans);
+console.log(ans);
 
-// ans
-// .then( (res) => {
-// 	console.log(res);
-// })
-// .catch( (err) => {
-// 	console.log(err);
-// });
+ans
+.then( (res) => {
+	console.log(res);
+})
+.catch( (err) => {
+	console.log(err);
+});
 
 // or simply 
 
-// const sub = Promise.resolve("resolved.");
-// console.log(sub);
-// sub.then("accrepted promise")
-// .catch("rejected promise");
+const sub = Promise.resolve("resolved.");
+console.log(sub);
+sub.then("accrepted promise")
+.catch("rejected promise");
 
 
 // removing callback HELL
@@ -82,27 +82,27 @@ function likeYou(username) {
 
 // PROMISE HELL - so we use promise chaining
 
-// importantAction("Harsh").then((res) => {
-// 	console.log(res);
-// 	likeMe("Ayush").then((res)=>{
-// 		console.log(res);
-// 	})	
-// 	.catch((err)=>{
-// 		console.log(err);
-// 	})
-// })
-// .catch((err)=>{
-// 	console.log(err);
-// });
+importantAction("Harsh").then((res) => {
+	console.log(res);
+	likeMe("Ayush").then((res)=>{
+		console.log(res);
+	})	
+	.catch((err)=>{
+		console.log(err);
+	})
+})
+.catch((err)=>{
+	console.log(err);
+});
 
 // PROMISES CHAINING -- still lengthy
 
-// importantAction("Harsh").then((res)=>{
-// 	console.log(res);
-// 	return likeMe("Ayush");
-// }).then((res)=>{
-// 	console.log(res);
-// })
+importantAction("Harsh").then((res)=>{
+	console.log(res);
+	return likeMe("Ayush");
+}).then((res)=>{
+	console.log(res);
+})
 
 // PROMISE COMBINATORS - 
 // 1. PROMISE.ALL - if any one fails, all fails
